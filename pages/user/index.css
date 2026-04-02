@@ -19,7 +19,7 @@ main{
     width: 100%;
     flex: 1;
     padding: 70px ;
-    background-color: black;
+    /* background-color: black; */
 }
 
 /* style navbar */
