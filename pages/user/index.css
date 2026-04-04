@@ -193,6 +193,57 @@ nav .action-buttons a:nth-last-child(1) {
     }
 }
 
+@media (max-width: 900px) {
+    .hero-section {
+        padding: 0 40px;
+    }
+
+    .hero-title h1 {
+        font-size: 48px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-section {
+        background-position: right center;
+    }
+
+    .hero-overlay {
+        background: linear-gradient(90deg, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0.85) 60%, rgba(255, 255, 255, 0) 100%);
+    }
+
+    .hero-title {
+        gap: 16px;
+    }
+
+    .hero-title .hero-badge {
+        font-size: 11px;
+        padding: 6px 12px;
+    }
+
+    .hero-title h1 {
+        font-size: 36px;
+        letter-spacing: -1px;
+    }
+
+    .hero-title p {
+        font-size: 15px;
+        line-height: 24px;
+    }
+
+    .hero-title .hero-buttons {
+        flex-direction: column;
+        width: 100%;
+        gap: 12px;
+        margin-top: 8px;
+    }
+
+    .hero-title .hero-buttons button {
+        width: 100%;
+        padding: 12px 24px;
+    }
+}
+
 /* style footer */
 footer {
     width: 100%;
