@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modal Laporan Selesai</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            box-sizing: border-box;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #f0f0f0;
+        }
+
+        .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.25);
+            /* Hitam Opacity 25% */
+            display: none;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+
+            /* Active state */
+            &.active {
+                display: flex;
+            }
+
+            /* Modal Card Container */
+            .modal-card {
+                width: 90%;
+                max-width: 800px;
+                border-radius: 8px;
+                overflow: hidden;
+                background: #FFF;
+                box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+
+                /* Modal Header */
+                .modal-header {
+                    background-color: #f4f7f6;
+                    padding: 15px 20px;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    border-bottom: 1px solid #ddd;
+
+                    .header-title {
+                        display: flex;
+                        align-items: center;
+                        gap: 10px;
+                        color: #181C1C;
+                        font-size: 14px;
+                        font-style: normal;
+                        font-weight: 600;
+                        letter-spacing: 1.4px;
+                        text-transform: uppercase;
+
+                        svg {
+                            width: 11px;
+                            height: 11px;
+                        }
+                    }
+
+                    .close-btn {
+                        background: none;
+                        border: none;
+                        font-size: 24px;
+                        cursor: pointer;
+                        color: #333;
+                        transition: all 0.2s ease;
+
+                        &:hover {
+                            color: #0D9488;
+                            transform: scale(1.1);
+                        }
+                    }
+                }
+
+                /* Modal Body */
+                .modal-body {
+                    display: flex;
+                    padding: 25px;
+                    gap: 20px;
+
+                    .image-preview {
+                        flex: 1;
+
+                        img {
+                            width: 100%;
+                            border-radius: 8px;
+                            display: block;
+                            object-fit: cover;
+                        }
+                    }
+
+                    .input-section {
+                        flex: 2;
+
+                        textarea {
+                            width: 100%;
+                            height: 100%;
+                            min-height: 200px;
+                            border: none;
+                            border-radius: 8px;
+                            background: #E5E9E8;
+                            padding: 15px;
+                            resize: vertical;
+                            font-size: 14px;
+                            color: #6B7280;
+                            font-weight: 400;
+                            font-family: 'Montserrat', sans-serif;
+                            transition: all 0.2s ease;
+
+                            &:focus {
+                                outline: 2px solid #0D9488;
+                                background: #fff;
+                            }
+
+                            &::placeholder {
+                                color: #9CA3AF;
+                                font-family: 'Montserrat', sans-serif;
+                            }
+                        }
+                    }
+                }
+
+                /* Modal Footer */
+                .modal-footer {
+                    padding: 0 25px 25px 25px;
+                    display: flex;
+                    justify-content: flex-end;
+                    gap: 15px;
+
+                    .btn-outline {
+                        background: none;
+                        border: 2px dashed #0D9488;
+                        color: #0D9488;
+                        padding: 10px 20px;
+                        border-radius: 8px;
+                        font-weight: 600;
+                        cursor: pointer;
+                        transition: all 0.2s ease;
+                        font-family: 'Montserrat', sans-serif;
+
+                        &:hover {
+                            background-color: #0D9488;
+                            color: white;
+                            border: 2px solid #0D9488;
+                        }
+
+                        &:active {
+                            transform: translateY(0);
+                        }
+                    }
+
+                    .btn-primary {
+                        background-color: #0D9488;
+                        border: none;
+                        color: white;
+                        padding: 10px 40px;
+                        border-radius: 8px;
+                        font-weight: 600;
+                        cursor: pointer;
+                        transition: all 0.2s ease;
+                        font-family: 'Montserrat', sans-serif;
+
+                        &:hover {
+                            background-color: #0b7a70;
+                        }
+
+                        &:active {
+                            transform: translateY(0);
+                        }
+                    }
+                }
+            }
+        }
+
+        /* Responsive Design untuk Modal */
+        @media screen and (max-width: 768px) {
+            .modal-overlay {
+                .modal-card {
+                    width: 95%;
+                    max-width: 95%;
+
+                    .modal-body {
+                        flex-direction: column;
+                        padding: 20px;
+
+                        .image-preview {
+                            flex: auto;
+                            max-width: 100%;
+
+                            img {
+                                max-height: 200px;
+                                width: auto;
+                                margin: 0 auto;
+                            }
+                        }
+
+                        .input-section {
+                            flex: auto;
+
+                            textarea {
+                                min-height: 150px;
+                            }
+                        }
+                    }
+
+                    .modal-footer {
+                        padding: 0 20px 20px 20px;
+                        flex-wrap: wrap;
+
+                        .btn-outline,
+                        .btn-primary {
+                            flex: 1;
+                            min-width: 120px;
+                        }
+                    }
+
+                    .modal-header {
+                        padding: 12px 15px;
+
+                        .header-title {
+                            font-size: 11px;
+                            letter-spacing: 1px;
+                            gap: 6px;
+
+                            svg {
+                                width: 9px;
+                                height: 9px;
+                            }
+                        }
+
+                        .close-btn {
+                            font-size: 28px;
+                        }
+                    }
+                }
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+            .modal-overlay {
+                .modal-card {
+                    .modal-footer {
+                        flex-direction: column;
+
+                        .btn-outline,
+                        .btn-primary {
+                            width: 100%;
+                            padding: 12px 20px;
+                        }
+                    }
+
+                    .modal-body {
+                        padding: 15px;
+
+                        .input-section textarea {
+                            font-size: 12px;
+                            min-height: 120px;
+                        }
+                    }
+                }
+            }
+        }
+
+        /* Animasi untuk modal muncul */
+        @keyframes modalFadeIn {
+            from {
+                opacity: 0;
+                transform: scale(0.9);
+            }
+
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        .modal-overlay.active {
+            .modal-card {
+                animation: modalFadeIn 0.2s ease-out;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <button id="openModal">Buka Modal</button>
+
+    <div class="modal-overlay" id="modalOverlay">
+
+        <div class="modal-card">
+
+            <div class="modal-header">
+                <div class="header-title">
+                    <svg width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M1.16667 10.5C0.845833 10.5 0.571181 10.3858 0.342708 10.1573C0.114236 9.92882 0 9.65417 0 9.33333V1.16667C0 0.845833 0.114236 0.571181 0.342708 0.342708C0.571181 0.114236 0.845833 0 1.16667 0H9.33333C9.65417 0 9.92882 0.114236 10.1573 0.342708C10.3858 0.571181 10.5 0.845833 10.5 1.16667V9.33333C10.5 9.65417 10.3858 9.92882 10.1573 10.1573C9.92882 10.3858 9.65417 10.5 9.33333 10.5H1.16667ZM1.16667 9.33333H9.33333V1.16667H1.16667V9.33333ZM1.75 8.16667H8.75L6.5625 5.25L4.8125 7.58333L3.5 5.83333L1.75 8.16667ZM1.16667 9.33333V1.16667V9.33333Z"
+                            fill="#181C1C" />
+                    </svg>
+
+                    UPLOAD BUKTI DAN PESAN PERBAIKAN
+                </div>
+                <button class="close-btn" id="closeModal">&times;</button>
+            </div>
+
+            <div class="modal-body">
+                <div class="image-preview">
+                    <img src="https://via.placeholder.com/300x300?text=Bukti+Kerusakan" alt="Bukti Perbaikan">
+                </div>
+
+                <div class="input-section">
+                    <textarea placeholder="Tulis instruksi atau konfirmasi untuk mahasiswa pelapor..."></textarea>
+                </div>
+            </div>
+
+            <div class="modal-footer">
+                <button class="btn-outline">Upload Bukti Laporan</button>
+                <button class="btn-primary">Kirim</button>
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        const openBtn = document.getElementById('openModal');
+        const closeBtn = document.getElementById('closeModal');
+        const overlay = document.getElementById('modalOverlay');
+
+        // Fungsi Membuka Modal
+        openBtn.addEventListener('click', () => {
+            overlay.classList.add('active');
+        });
+
+        // Fungsi Menutup Modal
+        closeBtn.addEventListener('click', () => {
+            overlay.classList.remove('active');
+        });
+
+        // Menutup modal jika user klik di area hitam (overlay)
+        overlay.addEventListener('click', (e) => {
+            if (e.target === overlay) {
+                overlay.classList.remove('active');
+            }
+        });
+
+    </script>
+</body>
+
+</html>

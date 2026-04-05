@@ -9,6 +9,7 @@
     <!-- link css -->
     <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="table.css">
+    <link rel="stylesheet" href="../template.css">
 
     <!-- link fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;600;700&display=swap" rel="stylesheet">
@@ -36,7 +37,7 @@
                 </div>
                 <ul class="nav-item">
                     <li class="nav-link">
-                        <a href="#">
+                        <a href="../dashboard/index.html">
                             <svg width="18" height="18" viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg">
                                 <path fill="currentColor"
                                     d="M10 6V0H18V6H10ZM0 10V0H8V10H0ZM10 18V8H18V18H10ZM0 18V12H8V18H0ZM2 8H6V2H2V8ZM12 16H16V10H12V16ZM12 4H16V2H12V4ZM2 16H6V14H2V16Z" />
@@ -45,7 +46,7 @@
                         </a>
                     </li>
                     <li class="nav-link active">
-                        <a href="#">
+                        <a href="../manajemen-laporan/index.html">
                             <svg width="18" height="18" viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg">
                                 <path fill="currentColor"
                                     d="M4 14H6V9H4V14ZM12 14H14V4H12V14ZM8 14H10V11H8V14ZM8 9H10V7H8V9ZM2 18C1.45 18 0.979167 17.8042 0.5875 17.4125C0.195833 17.0208 0 16.55 0 16V2C0 1.45 0.195833 0.979167 0.5875 0.5875C0.979167 0.195833 1.45 0 2 0H16C16.55 0 17.0208 0.195833 17.4125 0.5875C17.8042 0.979167 18 1.45 18 2V16C18 16.55 17.8042 17.0208 17.4125 17.4125C17.0208 17.8042 16.55 18 16 18H2ZM2 16H16V2H2V16ZM2 2V16V2Z" />
@@ -54,7 +55,7 @@
                         </a>
                     </li>
                     <li class="nav-link">
-                        <a href="#">
+                        <a href="../admin-notification-page/index.html">
                             <svg width="18" height="18" viewBox="0 0 18 18" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <path
@@ -71,7 +72,7 @@
                         </a>
                     </li>
                     <li class="nav-link">
-                        <a href="#">
+                        <a href="../admin-profile/admin-profile.html">
                             <svg width="18" height="18" viewBox="0 0 18 18" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <path
@@ -305,7 +306,7 @@
                                     </p>
                                 </td>
                                 <td class="kolom-aksi">
-                                    <a href="#">
+                                    <a href="./detail/selesai.html">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
                                             viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                                             stroke-linecap="round" stroke-linejoin="round"
@@ -347,7 +348,7 @@
                                     </p>
                                 </td>
                                 <td class="kolom-aksi">
-                                    <a href="#">
+                                    <a href="./detail/reject.html">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
                                             viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                                             stroke-linecap="round" stroke-linejoin="round"
@@ -390,7 +391,7 @@
                                     </p>
                                 </td>
                                 <td class="kolom-aksi">
-                                    <a href="#">
+                                    <a href="./detail/pending.html">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
                                             viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                                             stroke-linecap="round" stroke-linejoin="round"
@@ -433,7 +434,7 @@
                                     </p>
                                 </td>
                                 <td class="kolom-aksi">
-                                    <a href="#">
+                                    <a href="./detail/diproses.html">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
                                             viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                                             stroke-linecap="round" stroke-linejoin="round"
@@ -476,7 +477,7 @@
                                     </p>
                                 </td>
                                 <td class="kolom-aksi">
-                                    <a href="#">
+                                    <a href="./detail/verifikasi.html">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
                                             viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                                             stroke-linecap="round" stroke-linejoin="round"
@@ -519,19 +520,19 @@
 
 
     <script>
-        // sidebar responsive handler
         const menu = document.querySelector('.menu-button');
         const sidebar = document.querySelector('.sidebar');
         const closeMenu = document.querySelector('.close-menu');
 
         menu.addEventListener('click', function () {
             sidebar.classList.add('open');
+            document.body.style.overflow = 'hidden';
         });
 
         closeMenu.addEventListener('click', function () {
             sidebar.classList.remove('open');
+            document.body.style.overflow = '';
         });
-
 
         // date input handler
         const tanggalAwalWrapper = document.querySelector('.input-tanggal-awal');

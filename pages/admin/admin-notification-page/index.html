@@ -2,8 +2,17 @@
 <html lang="en">
 
 <head>
-    <link rel="stylesheet" href="admin-notification.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notifkasi Admin</title>
     <link rel="stylesheet" href="../template.css">
+    <link rel="stylesheet" href="admin-notification.css">
+    <!-- link fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;600;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
@@ -41,7 +50,7 @@
                         </a>
                     </li>
                     <li class="nav-link active">
-                        <a href="../admin-notification-page/index.html">
+                        <a href="#">
                             <svg width="18" height="18" viewBox="0 0 18 18" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <path
@@ -258,23 +267,25 @@
                 </div>
             </main>
         </div>
-        <script>
-            const menu = document.querySelector('.menu-button');
-            const sidebar = document.querySelector('.sidebar');
-            const closeMenu = document.querySelector('.close-menu');
+    </div>
 
-            menu.addEventListener('click', function () {
-                sidebar.classList.add('open');
-                document.body.style.overflow = 'hidden';
-            });
 
-            closeMenu.addEventListener('click', function () {
-                sidebar.classList.remove('open');
-                document.body.style.overflow = '';
-            });
+    <script>
+        const menu = document.querySelector('.menu-button');
+        const sidebar = document.querySelector('.sidebar');
+        const closeMenu = document.querySelector('.close-menu');
 
-        </script>
+        menu.addEventListener('click', function () {
+            sidebar.classList.add('open');
+            document.body.style.overflow = 'hidden';
+        });
 
+        closeMenu.addEventListener('click', function () {
+            sidebar.classList.remove('open');
+            document.body.style.overflow = '';
+        });
+
+    </script>
 </body>
 
 </html>

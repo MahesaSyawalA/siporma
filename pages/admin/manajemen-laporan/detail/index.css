@@ -38,6 +38,7 @@
             gap: 12px;
 
             button {
+                cursor: pointer;
                 padding: 10px 24px;
                 border-radius: 8px;
                 font-size: 14px;
@@ -60,6 +61,19 @@
 
                 &:hover {
                     background-color: #e8252f;
+                }
+            }
+
+            .proccess-button {
+                color: #0D9488;
+                background: transparent;
+                border-radius: 8px;
+                border: 1px solid var(--Foundation-SIPORMA-Secondary-Dark, #0A6F66);
+
+                &:hover {
+                    background-color: #0D9488;
+                    color: white;
+
                 }
             }
 
@@ -461,6 +475,50 @@
             }
         }
     }
+
+    .admin-massage-card {
+        grid-column: span 3;
+        display: flex;
+        flex-direction: column;
+        order: 4;
+        border-radius: 8px;
+        background: #FFF;
+        box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.10);
+        display: flex;
+        width: 100%;
+        height: 100%;
+        flex-direction: column;
+        align-items: flex-start;
+        overflow: hidden;
+        height: fit-content;
+
+
+        >div:first-child {
+            width: 100%;
+            display: flex;
+            gap: 10px;
+            align-items: center;
+            padding: 24px;
+            color: #181C1C;
+            background-color: hsla(165, 7%, 88%, 1);
+
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 20px;
+            letter-spacing: 1.4px;
+            text-transform: uppercase;
+        }
+
+        .massage-admin {
+            display: flex;
+            padding: 24px;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 16px;
+            align-self: stretch;
+        }
+    }
 }
 
 
@@ -497,6 +555,11 @@
 
         .admin-proof-card {
             order: 3;
+            grid-column: span 1;
+        }
+
+        .admin-massage-card{
+            order: 4;
             grid-column: span 1;
         }
     }
