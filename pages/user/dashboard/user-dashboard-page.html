@@ -295,6 +295,45 @@
             <a href="../help-center/help-center.html"><img src="../../../assets/icons/massage-icon.svg" alt="icon"></a>
         </div>
     </footer>
+
+    <script>
+
+        document.addEventListener('DOMContentLoaded', function () {
+            const tabButtons = document.querySelectorAll('.filter-tabs .tab-button');
+
+            tabButtons.forEach(button => {
+                button.addEventListener('click', function () {
+                    tabButtons.forEach(btn => btn.classList.remove('active'));
+
+                    this.classList.add('active');
+                });
+            });
+
+            const cancelButtons = document.querySelectorAll('.link-danger');
+
+            cancelButtons.forEach(button => {
+                button.addEventListener('click', function (event) {
+
+                    event.preventDefault();
+                    const isSure = confirm("Apakah Anda yakin ingin membatalkan laporan ini? Tindakan ini tidak dapat diurungkan.");
+
+                    if (isSure) {
+                        const isConfirmed = confirm("Laporan berhasil dibatalkan secara permanen! Apakah Anda ingin memuat ulang (refresh) halaman untuk melihat perubahan?");
+
+                        if (isConfirmed) {
+                            window.location.reload();
+                        }
+                    }
+
+                });
+            });
+
+        });
+    </script>
+
+</body>
+
+</html>
 </body>
 
 </html>

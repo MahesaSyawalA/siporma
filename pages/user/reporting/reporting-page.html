@@ -254,6 +254,30 @@
             <a href="../support/contact-page.html"><img src="../../../assets/icons/massage-icon.svg" alt="icon"></a>
         </div>
     </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+
+            const reportForm = document.querySelector('.reporting-form .form');
+
+            reportForm.addEventListener('submit', function (event) {
+                event.preventDefault();
+                const isSure = confirm("Apakah Anda yakin data kerusakan fasilitas yang diisi sudah benar?");
+
+                if (isSure) {
+
+                    const isConfirmed = confirm("Laporan Anda berhasil disubmit! Apakah Anda ingin melihat status laporan di Dashboard?");
+
+                    if (isConfirmed) {
+                        window.location.href = '../dashboard/user-dashboard-page.html';
+                    }
+
+                }
+            });
+
+        });
+    </script>
+
 </body>
 
 </html>
