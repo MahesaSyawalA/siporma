@@ -193,6 +193,7 @@ main {
             background: #fff;
 
             & .media-badge {
+                margin-top: 6px;
                 display: inline-block;
                 font-size: .65rem;
                 font-weight: 700;
@@ -212,6 +213,8 @@ main {
             }
 
             & p {
+                margin-top: 6px;
+                margin-bottom: 14px;
                 font-size: .75rem;
                 color: var(--gray-500);
                 line-height: 1.45;
@@ -361,7 +364,7 @@ main {
     flex-wrap: wrap;
     gap: .75rem;
     margin-top: 30px;
-    
+
 
     & .btn {
         margin-top: 10px;
@@ -527,15 +530,37 @@ main {
     }
 }
 
+@media (max-width: 1024px) {
+    main {
+        padding: 40px;
+    }
+}
 
-
+@media (max-width: 550px) {
+    .action-bar .btn {
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+    }
+}
 
 @media (max-width: 480px) {
+
+    main {
+        padding: 24px 16px;
+    }
+
     .page-wrapper {
         padding: 1rem 1rem 2.5rem;
     }
 
     .page-header h1 {
         font-size: 1.1rem;
+    }
+
+    .action-bar .btn {
+        align-items: center;
+        justify-content: center;
+        width: 100%;
     }
 }
