@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SIPOR-MA | Detail Laporan</title>
+    <link rel="stylesheet" href="detail-report-page.css">
+
+</head>
+
+<body>
+
+    <nav>
+        <div id="siporma-logo"></div>
+        <ul class="navMenu">
+            <li><a href="../../index.html">Dashboard</a></li>
+            <li><a href="../../help-center/help-center.html">Pusat Bantuan</a></li>
+        </ul>
+        <div class="action-buttons">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="21" viewBox="0 0 18 21" fill="none">
+                <path
+                    d="M16.9016 13.8948C16.827 13.8049 16.7538 13.7151 16.6819 13.6284C15.6937 12.433 15.0957 11.7116 15.0957 8.32762C15.0957 6.57566 14.6766 5.13816 13.8505 4.06004C13.2414 3.26357 12.418 2.65938 11.3326 2.21285C11.3187 2.20508 11.3062 2.19489 11.2958 2.18275C10.9054 0.875527 9.83719 0 8.63239 0C7.42758 0 6.35979 0.875527 5.96942 2.18141C5.95902 2.19312 5.94672 2.20299 5.93303 2.21061C3.40034 3.25324 2.16948 5.25361 2.16948 8.32627C2.16948 11.7116 1.57246 12.433 0.583285 13.6271C0.51141 13.7137 0.438188 13.8018 0.363617 13.8934C0.170993 14.1257 0.048949 14.4084 0.01193 14.7079C-0.0250891 15.0074 0.0244659 15.3112 0.15473 15.5834C0.431898 16.1674 1.02262 16.5299 1.6969 16.5299H15.5728C16.2439 16.5299 16.8306 16.1678 17.1087 15.5865C17.2395 15.3143 17.2895 15.0102 17.2528 14.7103C17.2161 14.4105 17.0942 14.1275 16.9016 13.8948ZM8.63239 20.125C9.28152 20.1245 9.91842 19.9483 10.4755 19.6151C11.0326 19.2819 11.4891 18.8041 11.7967 18.2324C11.8112 18.205 11.8183 18.1744 11.8175 18.1434C11.8166 18.1124 11.8077 18.0822 11.7917 18.0556C11.7757 18.0291 11.7531 18.0072 11.7261 17.9919C11.6991 17.9767 11.6687 17.9687 11.6377 17.9688H5.62801C5.59698 17.9686 5.56645 17.9766 5.5394 17.9918C5.51234 18.007 5.48968 18.0289 5.47362 18.0554C5.45757 18.082 5.44866 18.1123 5.44777 18.1433C5.44688 18.1743 5.45403 18.205 5.46854 18.2324C5.77604 18.804 6.2325 19.2818 6.78951 19.615C7.34653 19.9481 7.98333 20.1244 8.63239 20.125Z"
+                    fill="#0D9488" />
+            </svg>
+            <a href="../../profile/profile.html">
+                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M15 8C15 9.06087 14.5786 10.0783 13.8284 10.8284C13.0783 11.5786 12.0609 12 11 12C9.93913 12 8.92172 11.5786 8.17157 10.8284C7.42143 10.0783 7 9.06087 7 8C7 6.93913 7.42143 5.92172 8.17157 5.17157C8.92172 4.42143 9.93913 4 11 4C12.0609 4 13.0783 4.42143 13.8284 5.17157C14.5786 5.92172 15 6.93913 15 8ZM13 8C13 8.53043 12.7893 9.03914 12.4142 9.41421C12.0391 9.78929 11.5304 10 11 10C10.4696 10 9.96086 9.78929 9.58579 9.41421C9.21071 9.03914 9 8.53043 9 8C9 7.46957 9.21071 6.96086 9.58579 6.58579C9.96086 6.21071 10.4696 6 11 6C11.5304 6 12.0391 6.21071 12.4142 6.58579C12.7893 6.96086 13 7.46957 13 8Z"
+                        fill="#0D9488" />
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M11 0C4.925 0 0 4.925 0 11C0 17.075 4.925 22 11 22C17.075 22 22 17.075 22 11C22 4.925 17.075 0 11 0ZM2 11C2 13.09 2.713 15.014 3.908 16.542C4.74744 15.4401 5.83015 14.5471 7.07164 13.9327C8.31312 13.3183 9.6798 12.9991 11.065 13C12.4324 12.9984 13.7821 13.3091 15.0111 13.9084C16.2402 14.5077 17.3162 15.3797 18.157 16.458C19.0234 15.3216 19.6068 13.9952 19.8589 12.5886C20.111 11.182 20.0244 9.73553 19.6065 8.36898C19.1886 7.00243 18.4512 5.75505 17.4555 4.73004C16.4598 3.70503 15.2343 2.93186 13.8804 2.47451C12.5265 2.01716 11.0832 1.88877 9.66986 2.09997C8.25652 2.31117 6.91379 2.85589 5.75277 3.68905C4.59175 4.52222 3.64581 5.61987 2.99323 6.8912C2.34065 8.16252 2.00018 9.57097 2 11ZM11 20C8.93391 20.0033 6.93014 19.2926 5.328 17.988C5.97281 17.0646 6.83119 16.3107 7.83008 15.7905C8.82896 15.2702 9.93876 14.999 11.065 15C12.1772 14.999 13.2735 15.2635 14.263 15.7713C15.2524 16.2792 16.1064 17.0158 16.754 17.92C15.1395 19.267 13.1026 20.0033 11 20Z"
+                        fill="#0D9488" />
+                </svg>
+            </a>
+            <a href="../../reporting/reporting-page.html">Lapor Sekarang</a>
+        </div>
+    </nav>
+
+    <main>
+        <div class="breadcrumb">
+            <a href="../../dashboard/user-dashboard-page.html">Dashboard</a>
+            <span class="sep">›</span>
+            <a href="#">Riwayat Laporan</a>
+            <span class="sep">›</span>
+            <span class="current">Detail #RMP-2025-002</span>
+        </div>
+
+
+        <div class="page-header">
+            <h1>Detail Dokumentasi Perbaikan</h1>
+            <span class="badge-selesai">✓ Selesai</span>
+        </div>
+
+
+        <div class="content-grid">
+
+            <div class="left-col">
+
+                <div class="media-row">
+
+                    <div class="media-card card">
+                        <div class="media-header">
+                            <svg viewBox="0 0 24 24" stroke-width="2">
+                                <rect x="3" y="3" width="18" height="18" rx="2" />
+                                <path d="M3 9h18M9 21V9" />
+                            </svg>
+                            Laporan Anda
+                        </div>
+                        <div class="media-img">
+                            <img src="../../../../assets/images/before-repair.png" alt="">
+                        </div>
+                        <div class="media-footer">
+                            <span class="media-badge before">Sebelum</span>
+                            <p>"AC di Ruang 314 mulai tidak mau berfungsi, kipas berputar tapi tidak ada angin diputar
+                                selama satu waktu."</p>
+                            <div class="media-meta">
+                                Dilaporkan oleh: Nama Siswa
+                                <div class="media-meta-time">
+                                    <svg viewBox="0 0 24 24" stroke-width="2">
+                                        <circle cx="12" cy="12" r="10" />
+                                        <path d="M12 6v6l4 2" />
+                                    </svg>
+                                    12 Okt 2024, 09:15
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="media-card card">
+                        <div class="media-header">
+                            <svg viewBox="0 0 24 24" stroke-width="2">
+                                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+                                <path d="M14 2v6h6M16 13H8M16 17H8M10 9H8" />
+                            </svg>
+                            Dokumentasi Perbaikan
+                        </div>
+                        <div class="media-img">
+                            <img src="../../../../assets/images/after-repair.png" alt="">
+                        </div>
+                        <div class="media-footer">
+                            <span class="media-badge after">Sesudah</span>
+                            <p>"Semua komponen sepenuhnya diganti dan kembali berfungsi dengan baik. Filter udara juga
+                                sudah dibersihkan."</p>
+                            <div class="media-meta">
+                                Teknisi: Budi Santoso
+                                <span>(Sarpras Team)</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="card audit-card">
+                    <div class="audit-header">
+                        <svg viewBox="0 0 24 24" stroke-width="2">
+                            <path d="M9 11l3 3L22 4" />
+                            <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11" />
+                        </svg>
+                        <h3>Audit Trail Laporan</h3>
+                    </div>
+
+                    <div class="timeline">
+
+                        <div class="timeline-item">
+                            <div class="dot-container">
+                                <div class="dot done"></div>
+                            </div>
+                            <div class="tl-body">
+                                <div class="tl-body-container">
+                                    <div class="tl-title">Laporan Terkirim</div>
+                                    <div class="tl-date">15 okt 2024, 09:15</div>
+                                </div>
+                                <div class="tl-desc">Sistem secara otomatis laporan dan mendaftarkan nama teknisi secara
+                                    otomatis kepada petugas.</div>
+                            </div>
+                        </div>
+
+                        <div class="timeline-item">
+                            <div class="dot-container">
+                                <div class="dot done"></div>
+                            </div>
+                            <div class="tl-body">
+                                <div class="tl-body-container">
+                                    <div class="tl-title">Verifikasi Admin</div>
+                                    <div class="tl-date">12 Okt 2024, 11:30</div>
+                                </div>
+                                <div class="tl-desc">Laporan dinyatakan valid oleh tim Sarpras. Kondisi awal dengan
+                                    vendor sparepart dimulai</div>
+                            </div>
+                        </div>
+
+                        <div class="timeline-item">
+                            <div class="dot-container">
+                                <div class="dot done"></div>
+                            </div>
+                            <div class="tl-body">
+                                <div class="tl-body-container">
+                                    <div class="tl-title">Penugasan Tim</div>
+                                    <div class="tl-date">13 Okt 2024, 08:00</div>
+                                </div>
+                                <div class="tl-desc">Tim lapangan ditugaskan ke lokasi (Gedung Baru Lt. 5) dengan
+                                    membawa
+                                    peralatan reparasi
+                                    standar.</div>
+                            </div>
+                        </div>
+
+                        <div class="timeline-item">
+                            <div class="dot-container">
+                                <div class="dot done"></div>
+                            </div>
+                            <div class="tl-body">
+                                <div class="tl-body-container">
+                                    <div class="tl-title">Proses Perbaikan</div>
+                                    <div class="tl-date">12 Okt 2024, 09:15</div>
+                                </div>
+                                <div class="tl-desc">Teknisi sedang melakukan penanganan fisik di unit AC. Penggantian
+                                    motor kipas internal
+                                    dilakukan.</div>
+                            </div>
+                        </div>
+
+                        <div class="timeline-item">
+                            <div class="dot-container">
+                                <div class="dot done"></div>
+                            </div>
+                            <div class="tl-body">
+                                <div class="tl-body-container">
+                                    <div class="tl-title">Selesai</div>
+                                    <div class="tl-date final">14 Okt 2024, 10:00</div>
+                                </div>
+                                <div class="tl-desc">Masalah teratasi sepenuhnya, pengujian beban listrik berhasil, dan
+                                    dokumentasi penyelesaian
+                                    diunggah ke sistem.</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <aside class="sidebar">
+
+                <div class="card info-card">
+                    <div class="info-title">Informasi Laporan</div>
+
+                    <div class="info-row">
+                        <div class="info-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="16" viewBox="0 0 18 16"
+                                fill="none">
+                                <path
+                                    d="M3 16L4 12H0L0.5 10H4.5L5.5 6H1.5L2 4H6L7 0H9L8 4H12L13 0H15L14 4H18L17.5 6H13.5L12.5 10H16.5L16 12H12L11 16H9L10 12H6L5 16H3ZM6.5 10H10.5L11.5 6H7.5L6.5 10Z"
+                                    fill="#004C3F" />
+                            </svg>
+                        </div>
+                        <div class="info-text">
+                            <div class="label">ID Laporan</div>
+                            <div class="value">#RMP-2025-002</div>
+                        </div>
+                    </div>
+
+                    <div class="info-row">
+                        <div class="info-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="20" viewBox="0 0 16 20"
+                                fill="none">
+                                <path
+                                    d="M8 10C8.55 10 9.02083 9.80417 9.4125 9.4125C9.80417 9.02083 10 8.55 10 8C10 7.45 9.80417 6.97917 9.4125 6.5875C9.02083 6.19583 8.55 6 8 6C7.45 6 6.97917 6.19583 6.5875 6.5875C6.19583 6.97917 6 7.45 6 8C6 8.55 6.19583 9.02083 6.5875 9.4125C6.97917 9.80417 7.45 10 8 10ZM8 17.35C10.0333 15.4833 11.5417 13.7875 12.525 12.2625C13.5083 10.7375 14 9.38333 14 8.2C14 6.38333 13.4208 4.89583 12.2625 3.7375C11.1042 2.57917 9.68333 2 8 2C6.31667 2 4.89583 2.57917 3.7375 3.7375C2.57917 4.89583 2 6.38333 2 8.2C2 9.38333 2.49167 10.7375 3.475 12.2625C4.45833 13.7875 5.96667 15.4833 8 17.35ZM8 20C5.31667 17.7167 3.3125 15.5958 1.9875 13.6375C0.6625 11.6792 0 9.86667 0 8.2C0 5.7 0.804167 3.70833 2.4125 2.225C4.02083 0.741667 5.88333 0 8 0C10.1167 0 11.9792 0.741667 13.5875 2.225C15.1958 3.70833 16 5.7 16 8.2C16 9.86667 15.3375 11.6792 14.0125 13.6375C12.6875 15.5958 10.6833 17.7167 8 20Z"
+                                    fill="#004C3F" />
+                            </svg>
+                        </div>
+                        <div class="info-text">
+                            <div class="label">Lokasi</div>
+                            <div class="value">Gedung Biru Lt. 5, Ruang 314</div>
+                        </div>
+                    </div>
+
+                    <div class="info-row">
+                        <div class="info-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="19" height="20" viewBox="0 0 19 20"
+                                fill="none">
+                                <path
+                                    d="M3.5 9L9 0L14.5 9H3.5ZM14.5 20C13.25 20 12.1875 19.5625 11.3125 18.6875C10.4375 17.8125 10 16.75 10 15.5C10 14.25 10.4375 13.1875 11.3125 12.3125C12.1875 11.4375 13.25 11 14.5 11C15.75 11 16.8125 11.4375 17.6875 12.3125C18.5625 13.1875 19 14.25 19 15.5C19 16.75 18.5625 17.8125 17.6875 18.6875C16.8125 19.5625 15.75 20 14.5 20ZM0 19.5V11.5H8V19.5H0ZM14.5 18C15.2 18 15.7917 17.7583 16.275 17.275C16.7583 16.7917 17 16.2 17 15.5C17 14.8 16.7583 14.2083 16.275 13.725C15.7917 13.2417 15.2 13 14.5 13C13.8 13 13.2083 13.2417 12.725 13.725C12.2417 14.2083 12 14.8 12 15.5C12 16.2 12.2417 16.7917 12.725 17.275C13.2083 17.7583 13.8 18 14.5 18ZM2 17.5H6V13.5H2V17.5ZM7.05 7H10.95L9 3.85L7.05 7Z"
+                                    fill="#004C3F" />
+                            </svg>
+                        </div>
+                        <div class="info-text">
+                            <div class="label">Kategori Fasilitas</div>
+                            <div class="value">Pendingin Ruangan (HVAC)</div>
+                        </div>
+                    </div>
+
+                    <div class="info-row">
+                        <div class="info-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="4" height="18" viewBox="0 0 4 18"
+                                fill="none">
+                                <path
+                                    d="M2 18C1.45 18 0.979167 17.8042 0.5875 17.4125C0.195833 17.0208 0 16.55 0 16C0 15.45 0.195833 14.9792 0.5875 14.5875C0.979167 14.1958 1.45 14 2 14C2.55 14 3.02083 14.1958 3.4125 14.5875C3.80417 14.9792 4 15.45 4 16C4 16.55 3.80417 17.0208 3.4125 17.4125C3.02083 17.8042 2.55 18 2 18ZM0 12V0H4V12H0Z"
+                                    fill="#BA1A1A" />
+                            </svg>
+                        </div>
+                        <div class="info-text">
+                            <div class="label">Prioritas Laporan</div>
+                            <div class="priority">Tinggi</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="help-card">
+                    <h4>Butuh Bantuan?</h4>
+                    <p>Apakah Anda mengalami kesulitan? Tim support kami siap membantu memulihkan masalah lebih lanjut.
+                    </p>
+                    <button class="btn-help">HUBUNGI HELPDESK</button>
+                </div>
+
+
+        </div>
+
+        </aside>
+
+        <div class="action-bar">
+            <button onclick="window.location.href='../../dashboard/user-dashboard-page.html'" class="btn btn-outline">
+                <svg viewBox="0 0 24 24" stroke-width="2">
+                    <path d="M19 12H5M12 19l-7-7 7-7" />
+                </svg>
+                Kembali ke Dashboard
+            </button>
+            <button onclick="alert('Bukti PDF laporan berhasil diunduh!')" class="btn btn-primary">
+                <svg viewBox="0 0 24 24" stroke-width="2">
+                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                    <polyline points="7 10 12 15 17 10" />
+                    <line x1="12" y1="15" x2="12" y2="3" />
+                </svg>
+                Unduh Bukti Laporan (PDF)
+            </button>
+        </div>
+
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-brand">
+            <p>SIPOR-MA</p>
+            <p>© 2026 SIPOR-MA. ALL RIGHTS RESERVED</p>
+        </div>
+
+        <div class="footer-links">
+            <div>
+                <a href='../../support/privacy-policy-page.html'>kebijakan privasi</a>
+                <a href='../../support/terms-and-conditions-page.html'>syarat & ketentuan</a>
+            </div>
+            <div>
+                <a href='../../support/contact-page.html'>kontak kami</a>
+                <a href='../../help-center/help-center.html'>pusat bantuan</a>
+            </div>
+        </div>
+        <div class="footer-actions">
+            <a href="../../index.html"><img src="../../../../assets/icons/globe-logo.svg" alt="icon"></a>
+            <a href="../../support/contact-page.html"><img src="../../../../assets/icons/massage-icon.svg"
+                    alt="icon"></a>
+        </div>
+    </footer>
+
+    <script>
+        var acc = document.getElementsByClassName("accordion");
+        var i;
+
+        for (i = 0; i < acc.length; i++) {
+            acc[i].addEventListener("click", function () {
+                this.classList.toggle("active");
+                var panel = this.nextElementSibling;
+                if (panel.style.maxHeight) {
+                    panel.style.maxHeight = null;
+                } else {
+                    panel.style.maxHeight = panel.scrollHeight + "px";
+                }
+            });
+        }
+    </script>
+</body>
+
+</html>
