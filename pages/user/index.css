@@ -883,6 +883,11 @@ footer {
     display: flex;
     flex-direction: column;
     gap: 10px;
+
+    a {
+        text-decoration: none;
+        color: #3F4945;
+    }
 }
 
 .footer-actions {
