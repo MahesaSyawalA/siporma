@@ -11,12 +11,13 @@
 :root {
     --teal: #0D9488;
     --teal-dark: #0A6F66;
-    --teal-light: #e8f7f5;
+    --teal-light: #E7F4F3;
     --green: #4caf50;
     --green-bg: #eaf7ea;
     --amber: #f59e0b;
     --amber-bg: #fff8e6;
-    --red: #ef4444;
+    --red: #93000A;
+    --priority-urgent: #FFDAD6;
     --blue: #3b82f6;
     --blue-bg: #eff6ff;
     --gray-50: #f9fafb;
@@ -29,6 +30,7 @@
     --gray-700: #374151;
     --gray-800: #1f2937;
     --white: #ffffff;
+    --black: #00000099;
     --shadow-sm: 0 1px 3px rgba(0, 0, 0, .08);
     --shadow: 0 4px 12px rgba(0, 0, 0, .10);
     --radius: 10px;
@@ -199,13 +201,13 @@ main {
                 margin-bottom: .35rem;
 
                 &.before {
-                    background: var(--amber-bg);
-                    color: var(--amber);
+                    background: var(--black);
+                    color: var(--amber-bg);
                 }
 
                 &.after {
-                    background: var(--green-bg);
-                    color: var(--green);
+                    background: var(--teal-dark);
+                    color: var(--amber-bg);
                 }
             }
 
@@ -222,6 +224,7 @@ main {
                 display: flex;
                 align-items: center;
                 gap: .3rem;
+                justify-content: space-between;
 
                 & svg {
                     width: 10px;
@@ -266,8 +269,9 @@ main {
     }
 
     & .timeline-item {
-        display: grid;
-        grid-template-columns: 16px 1fr auto;
+        display: flex;
+        /* flex-direction: column; 
+        grid-template-columns: 16px 1fr auto; */
         gap: .75rem;
         padding-bottom: 1.1rem;
         position: relative;
@@ -306,11 +310,18 @@ main {
         }
 
         & .tl-body {
+            width: 100%;
+
+            & .tl-body-container {
+                display: flex;
+                justify-content: space-between;
+                margin-bottom: 0.1rem;
+            }
+
             & .tl-title {
                 font-size: .82rem;
                 font-weight: 600;
                 color: var(--gray-700);
-                margin-bottom: .15rem;
             }
 
             & .tl-desc {
@@ -322,9 +333,21 @@ main {
 
         & .tl-date {
             font-size: .7rem;
-            color: var(--gray-400);
+            color: var(--black);
             white-space: nowrap;
             margin-top: 2px;
+            padding: 2px;
+            border-radius: 2px;
+            background-color: var(--gray-100);
+
+            &.final {
+                /* fill: var(--teal-light); */
+                border-color: var(--teal-dark);
+                background: var(--teal-dark);
+                color: var(--amber-bg);
+                padding: 2px;
+                border-radius: 2px;
+            }
         }
     }
 }
@@ -334,12 +357,14 @@ main {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem 1.25rem;
-    border-top: 1px solid var(--gray-100);
+    border-top: 1px solid var(--gray-300);
     flex-wrap: wrap;
     gap: .75rem;
+    margin-top: 30px;
+    
 
     & .btn {
+        margin-top: 10px;
         display: inline-flex;
         align-items: center;
         gap: .4rem;
@@ -351,6 +376,7 @@ main {
         font-family: inherit;
         transition: all .2s;
         border: none;
+        background-color: var(--teal-light);
 
         & svg {
             width: 14px;
@@ -359,9 +385,8 @@ main {
         }
 
         &.btn-outline {
-            background: var(--white);
             border: 1px solid var(--gray-300);
-            color: var(--gray-600);
+            color: teal;
 
             & svg {
                 stroke: var(--gray-500);
@@ -438,14 +463,25 @@ main {
             & .info-text {
                 & .label {
                     font-size: .68rem;
-                    color: var(--gray-400);
                     margin-bottom: .1rem;
+                    color: #3F4945;
                 }
 
                 & .value {
                     font-size: .8rem;
                     font-weight: 600;
-                    color: var(--gray-700);
+                    color: #181C1C;
+                }
+
+                & .priority {
+                    font-size: .65rem;
+                    font-weight: 600;
+                    color: var(--red);
+                    background-color: var(--priority-urgent);
+                    text-align: center;
+                    border-radius: 0.5rem;
+                    padding: 0.1rem;
+
                 }
             }
         }
