@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modal Penolakan</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #222;
+        }
+
+        .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            display: none;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        .modal-overlay.active {
+            display: flex;
+        }
+
+        .modal-card {
+            width: 500px;
+            background: white;
+            border-radius: 4px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .modal-header {
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px dashed #3498db;
+        }
+
+        .header-title {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: #181C1C;
+            font-size: 13px;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+        }
+
+        .icon-reject {
+            width: 18px;
+            height: 18px;
+            border: 2px solid #ff3b3b;
+            display: inline-block;
+            position: relative;
+        }
+
+        .close-btn {
+            background: none;
+            border: none;
+            font-size: 20px;
+            cursor: pointer;
+            color: #000;
+        }
+
+        .modal-body {
+            padding: 25px;
+        }
+
+        textarea {
+            width: 100%;
+            height: 150px;
+            border: none;
+            border-radius: 8px;
+            background: #E5E9E8;
+            padding: 15px;
+            resize: none;
+            font-size: 14px;
+            color: #333;
+        }
+
+        textarea::placeholder {
+            color: #9CA3AF;
+        }
+
+        .modal-footer {
+            padding: 0 25px 25px 25px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .footer-note {
+            font-size: 11px;
+            color: #9CA3AF;
+        }
+
+        .btn-reject {
+            background-color: #ff3b3b;
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 8px;
+            font-weight: 600;
+            cursor: pointer;
+            font-size: 14px;
+        }
+
+        .btn-reject:hover {
+            background-color: #e63535;
+        }
+    </style>
+</head>
+
+<body>
+
+    <button id="openModal">Buka Modal Penolakan</button>
+
+    <div class="modal-overlay" id="modalOverlay">
+        <div class="modal-card">
+
+            <div class="modal-header">
+                <div class="header-title">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M0 20V2C0 1.45 0.195833 0.979167 0.5875 0.5875C0.979167 0.195833 1.45 0 2 0H18C18.55 0 19.0208 0.195833 19.4125 0.5875C19.8042 0.979167 20 1.45 20 2V14C20 14.55 19.8042 15.0208 19.4125 15.4125C19.0208 15.8042 18.55 16 18 16H4L0 20ZM3.15 14H18V2H2V15.125L3.15 14ZM2 14V2V14Z"
+                            fill="#FB2C36" />
+                    </svg>
+
+                    KIRIM PESAN PENOLAKAN KE PELAPOR
+                </div>
+                <button class="close-btn" id="closeModal">&times;</button>
+            </div>
+
+            <div class="modal-body">
+                <textarea placeholder="Tulis instruksi atau konfirmasi untuk mahasiswa pelapor..."></textarea>
+            </div>
+
+            <div class="modal-footer">
+                <span class="footer-note">Pelapor akan menerima notifikasi</span>
+                <button class="btn-reject" id="submitReject">Kirim Pesan</button>
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        const openBtn = document.getElementById('openModal');
+        const closeBtn = document.getElementById('closeModal');
+        const overlay = document.getElementById('modalOverlay');
+        const submitBtn = document.getElementById('submitReject');
+
+        openBtn.addEventListener('click', () => {
+            overlay.classList.add('active');
+        });
+
+        closeBtn.addEventListener('click', () => {
+            overlay.classList.remove('active');
+        });
+
+        submitBtn.addEventListener('click', () => {
+            overlay.classList.remove('active');
+        });
+
+        window.addEventListener('click', (e) => {
+            if (e.target === overlay) {
+                overlay.classList.remove('active');
+            }
+        });
+    </script>
+</body>
+
+</html>
