@@ -1,6 +1,6 @@
 :root {
-    --teal: #00b894;
-    --teal-dark: #00987a;
+    --teal: #0D9488;
+    --teal-dark: #0C857A;
     --teal-soft: #e6f9f4;
     --teal-mid: #b2ede0;
     --bg: #f4f7f6;
@@ -29,11 +29,75 @@
 
 body {
     font-family: 'Plus Jakarta Sans', sans-serif;
-    background: var(--bg);
+    background: #FAFAFA;
     color: var(--text);
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+}
+
+nav {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 20px;
+    background-color: white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+#siporma-logo {
+    background-image: url('../../../assets/siporma-logo.svg');
+    width: 250px;
+    height: 50px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.navMenu {
+    display: flex;
+    gap: 10px;
+    list-style: none;
+}
+
+.navMenu li a {
+    text-decoration: none;
+    padding: 1px 0px;
+    font-weight: 600;
+    color: #707071;
+}
+
+.navMenu .active {
+    color: #0D9488;
+    border-bottom: 3px solid #0D9488;
+}
+
+nav .action-buttons {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+nav .action-buttons a {
+    text-decoration: none;
+    padding: 10px 10px;
+    color: #0D9488;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    background-color: white;
+}
+
+nav .action-buttons a:nth-last-child(1) {
+    text-decoration: none;
+    padding: 10px 20px;
+    background-color: #0D9488;
+    color: white;
+    border-radius: 5px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
 }
 
 /* ── MAIN ── */
@@ -42,7 +106,7 @@ main {
     max-width: 980px;
     width: 100%;
     margin: 32px auto;
-    padding: 0 24px;
+    padding: 40px 20px;
     display: flex;
     flex-direction: column;
     gap: 22px;
@@ -53,7 +117,7 @@ main {
     background: var(--card);
     border-radius: var(--radius);
     box-shadow: var(--shadow);
-    border: 1px solid var(--border);
+    border: none;
     padding: 26px 28px;
 }
 
@@ -114,7 +178,7 @@ main {
     right: 0;
     width: 22px;
     height: 22px;
-    background: var(--teal);
+    background: #0D9488;
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -172,7 +236,7 @@ main {
     background: var(--card);
     border-radius: var(--radius);
     box-shadow: var(--shadow);
-    border: 1px solid var(--border);
+    border: none;
     overflow: hidden;
 }
 
@@ -228,7 +292,7 @@ main {
     font-family: 'Plus Jakarta Sans', sans-serif;
     font-weight: 800;
     font-size: 2rem;
-    color: var(--teal);
+    color: #0D9488;
     line-height: 1;
 }
 
@@ -248,7 +312,7 @@ main {
 .section-title {
     font-family: 'Plus Jakarta Sans', sans-serif;
     font-weight: 700;
-    font-size: 1rem;
+    font-size: 20px;
     color: var(--text);
     margin-bottom: 18px;
 }
@@ -263,7 +327,7 @@ main {
 .form-group {
     display: flex;
     flex-direction: column;
-    gap: 5px;
+    gap: 10px;
 }
 
 .form-label {
@@ -276,7 +340,7 @@ main {
 
 .form-input {
     background: var(--bg);
-    border: 1.5px solid var(--border);
+    border: none;
     border-radius: 9px;
     padding: 10px 14px;
     font-family: 'Plus Jakarta Sans', sans-serif;
@@ -397,6 +461,7 @@ main {
 }
 
 .btn-save {
+    font-family: "Poppins", sans-serif;
     width: 100%;
     margin-top: 18px;
     background: var(--teal);
@@ -406,7 +471,7 @@ main {
     padding: 12px;
     font-family: 'Plus Jakarta Sans', sans-serif;
     font-weight: 600;
-    font-size: .9rem;
+    font-size: 1rem;
     cursor: pointer;
     transition: background .2s, transform .15s;
 }
@@ -454,39 +519,6 @@ main {
     gap: 8px;
 }
 
-
-
-/* Animasi Masuk */
-@keyframes fadeUp {
-    from {
-        opacity: 0;
-        transform: translateY(14px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-.card,
-.stats-row,
-.two-col {
-    animation: fadeUp .35s ease both;
-}
-
-.card:nth-child(1) {
-    animation-delay: .05s;
-}
-
-.stats-row {
-    animation-delay: .1s;
-}
-
-.two-col {
-    animation-delay: .15s;
-}
-
 /* ── TABLET (≤ 768px) ── */
 @media (max-width: 768px) {
 
@@ -518,11 +550,11 @@ main {
 /* ── MOBILE (≤ 480px) ── */
 @media (max-width: 480px) {
 
-    main{
-        padding:40px 16px ;
+    main {
+        padding: 40px 16px;
     }
 
-    .stats-row{
+    .stats-row {
         grid-template-columns: 1fr;
     }
 
@@ -537,4 +569,75 @@ main {
     .profile-name {
         font-size: 1.1rem;
     }
+}
+
+footer {
+    width: 100%;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    padding: 60px 40px;
+    gap: 70px;
+    background-image: url("../../../assets/bg-footer.svg");
+    background-position: left;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.footer-brand {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.footer-brand P:nth-child(1) {
+    color: #0A6F66;
+    font-weight: 700;
+    font-size: 20px;
+}
+
+.footer-brand P:nth-child(2) {
+    width: 470px;
+    color: #3F4945;
+    font-size: 12px;
+}
+
+.footer-links {
+    display: flex;
+    text-transform: uppercase;
+    gap: 32px;
+    font-size: 12px;
+    color: #3F4945;
+
+}
+
+.footer-links div {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    a {
+        text-decoration: none;
+        color: #3F4945;
+    }
+}
+
+.footer-actions {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+}
+
+.footer-actions a {
+    background-color: #E5E9E8;
+    border-radius: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #E5E9E8;
+    border-radius: 12px;
+    height: 40px;
+    width: 40px;
 }
