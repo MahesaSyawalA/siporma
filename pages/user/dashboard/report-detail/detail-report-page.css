@@ -57,7 +57,7 @@ nav {
 }
 
 #siporma-logo {
-    background-image: url('../../../assets/siporma-logo.svg');
+    background-image: url('../../../../assets/siporma-logo.svg');
     width: 250px;
     height: 50px;
     background-repeat: no-repeat;
@@ -285,7 +285,7 @@ main {
 
             & .media-meta {
                 font-size: .68rem;
-                color: var(--gray-400);
+                color: #3F4945;
                 margin-top: .4rem;
                 display: flex;
                 align-items: center;

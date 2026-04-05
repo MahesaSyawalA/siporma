@@ -23,12 +23,11 @@
 * {
     margin: 0;
     padding: 0;
-    font-family: 'Plus Jakarta Sans', sans-serif;
     box-sizing: border-box;
 }
 
 body {
-    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-family: 'Poppins', sans-serif;
     background: #FAFAFA;
     color: var(--text);
     min-height: 100vh;
@@ -103,10 +102,10 @@ nav .action-buttons a:nth-last-child(1) {
 /* ── MAIN ── */
 main {
     flex: 1;
-    max-width: 980px;
+    /* max-width: 980px; */
     width: 100%;
     margin: 32px auto;
-    padding: 40px 20px;
+    padding: 70px;
     display: flex;
     flex-direction: column;
     gap: 22px;

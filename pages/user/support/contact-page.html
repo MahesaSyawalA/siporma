@@ -90,13 +90,14 @@
                 <div class="form-container">
                     <form action="">
                         <label for="fname">Nama Lengkap:</label><br>
-                        <input type="text" id="fname" name="fname" placeholder="Nama Lengkap Anda"><br>
+                        <input required type="text" id="fname" name="fname" placeholder="Nama Lengkap Anda"><br>
                         <label for="emaila">Alamat Email:</label><br>
-                        <input type="text" id="emaila" name="emaila" placeholder="email@kampus.ac.id"><br>
+                        <input required type="text" id="emaila" name="emaila" placeholder="email@kampus.ac.id"><br>
                         <label for="msg">Pesan:</label><br>
-                        <textarea id="msg" name="msg" rows="4" cols="50" placeholder="tuliskan pesan anda disini">
+                        <textarea required id="msg" name="msg" rows="4" cols="50"
+                            placeholder="tuliskan pesan anda disini">
                             </textarea>
-                        <input type="submit" value="Kirim Pesan">
+                        <button>Kirim Pesan</button>
                     </form>
                 </div>
             </div>
