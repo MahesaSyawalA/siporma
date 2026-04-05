@@ -33,19 +33,27 @@
     align-items: center;
     gap: 12px;
 
-    h5 {
-        font-family: "Plus Jakarta Sans", sans-serif;
-        font-size: 20px;
-        font-weight: 700;
-        color: #ffff;
-        letter-spacing: 2px;
-    }
+    a {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        text-decoration: none;
+        color: #F6FCFA;
 
-    img {
-        width: 32px;
-        height: 32px;
-        border-radius: 8px;
-        background: #f6fcfa;
+        h5 {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-size: 20px;
+            font-weight: 700;
+            color: #FFFF;
+            letter-spacing: 2px;
+        }
+
+        img {
+            width: 32px;
+            height: 32px;
+            border-radius: 8px;
+            background: #F6FCFA;
+        }
     }
 }
 
