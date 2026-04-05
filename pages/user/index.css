@@ -15,10 +15,10 @@ body {
     font-family: 'Poppins', sans-serif;
 }
 
-main{
+main {
     width: 100%;
     flex: 1;
-    padding: 70px ;
+    padding: 70px;
     /* background-color: black; */
 }
 
@@ -34,6 +34,7 @@ nav {
 }
 
 #siporma-logo {
+    display: none;
     background-image: url('../../assets/siporma-logo.svg');
     width: 250px;
     height: 50px;
@@ -42,8 +43,14 @@ nav {
     background-size: cover;
 }
 
-.navMenu {
+nav>button:first-child {
     display: flex;
+    border: none;
+    background: transparent;
+}
+
+.navMenu {
+    display: none;
     gap: 10px;
     list-style: none;
 }
@@ -87,6 +94,21 @@ nav .action-buttons a:nth-last-child(1) {
     align-items: center;
 }
 
+@media(min-width:768px) {
+    #siporma-logo {
+        display: flex;
+    }
+
+    .navMenu {
+        display: flex;
+    }
+
+    nav>button:first-child {
+        display: none;
+    }
+
+}
+
 /* style footer */
 footer {
     width: 100%;
@@ -94,7 +116,7 @@ footer {
     display: flex;
     align-items: center;
     justify-content: end;
-    padding: 60px 40px ;
+    padding: 60px 40px;
     gap: 70px;
     background-image: url("../../assets/bg-footer.svg");
     background-position: left;
@@ -132,7 +154,7 @@ footer {
     display: flex;
     flex-direction: column;
     gap: 10px;
-} 
+}
 
 .footer-actions {
     display: flex;
