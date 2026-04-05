@@ -341,12 +341,13 @@ nav .action-buttons a:nth-last-child(1) {
 
 footer {
     width: 100%;
-    background-color: white;
+    background-color: #FAFAFA;
     display: flex;
     align-items: center;
-    justify-content: end;
-    padding: 60px 40px;
+    justify-content: flex-end;
+    padding: 60px 80px;
     gap: 70px;
+
     background-image: url("../../../assets/bg-footer.svg");
     background-position: left;
     background-size: cover;
@@ -366,9 +367,11 @@ footer {
 }
 
 .footer-brand P:nth-child(2) {
-    width: 470px;
+    max-width: 470px;
+    width: 100%;
     color: #3F4945;
     font-size: 12px;
+    line-height: 1.6;
 }
 
 .footer-links {
@@ -377,7 +380,6 @@ footer {
     gap: 32px;
     font-size: 12px;
     color: #3F4945;
-
 }
 
 .footer-links div {
@@ -408,4 +410,49 @@ footer {
     border-radius: 12px;
     height: 40px;
     width: 40px;
+}
+
+@media (max-width: 1024px) {
+    footer {
+        padding: 40px;
+        gap: 40px;
+        flex-wrap: wrap;
+        justify-content: center;
+        background-image: none;
+    }
+
+    .footer-brand {
+        align-items: center;
+        text-align: center;
+    }
+}
+
+@media (max-width: 680px) {
+    footer {
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        padding: 40px 24px;
+        gap: 32px;
+        background-image: none;
+    }
+
+    .footer-brand {
+        align-items: flex-start;
+        text-align: left;
+    }
+
+    .footer-links {
+        flex-direction: column;
+        gap: 16px;
+        width: 100%;
+        border-top: 1px solid #EAEAED;
+        padding-top: 24px;
+    }
+
+    .footer-actions {
+        width: 100%;
+        justify-content: flex-start;
+        margin-top: 8px;
+    }
 }
