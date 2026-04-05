@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Help Center</title>
+
+    <link rel="stylesheet" href="help-center.css">
+
+    <!-- footer -->
+    <style>
+        footer {
+            width: 100%;
+            background-color: white;
+            display: flex;
+            align-items: center;
+            justify-content: end;
+            padding: 60px 40px;
+            gap: 70px;
+            background-image: url("../../assets/bg-footer.svg");
+            background-position: left;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        .footer-brand {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .footer-brand P:nth-child(1) {
+            color: #0A6F66;
+            font-weight: 700;
+            font-size: 20px;
+        }
+
+        .footer-brand P:nth-child(2) {
+            width: 470px;
+            color: #3F4945;
+            font-size: 12px;
+        }
+
+        .footer-links {
+            display: flex;
+            text-transform: uppercase;
+            gap: 32px;
+            font-size: 12px;
+            color: #3F4945;
+        }
+
+        .footer-links div {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .footer-actions {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .footer-actions a {
+            background-color: #E5E9E8;
+            border-radius: 12px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #E5E9E8;
+            border-radius: 12px;
+            height: 40px;
+            width: 40px;
+        }
+    </style>
+
+    <!-- navbar -->
+    <style>
+        /* ini baru styling yang harus ada ketika mau nambahin component nya guyse */
+        nav {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 20px 20px;
+            background-color: white;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        #siporma-logo {
+            background-image: url('../../assets/siporma-logo.svg');
+            width: 250px;
+            height: 50px;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+        }
+
+        .navMenu {
+            display: flex;
+            gap: 10px;
+            list-style: none;
+        }
+
+        .navMenu li a {
+            text-decoration: none;
+            padding: 1px 0px;
+            font-weight: 600;
+            color: #707071;
+        }
+
+        .navMenu .active-dashboard {
+            color: #0D9488;
+            border-bottom: 3px solid #0D9488;
+        }
+
+        nav .action-buttons {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        nav .action-buttons a {
+            text-decoration: none;
+            padding: 10px 10px;
+            color: #0D9488;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            background-color: white;
+        }
+
+        nav .action-buttons a:nth-last-child(1) {
+            text-decoration: none;
+            padding: 10px 20px;
+            background-color: #0D9488;
+            color: white;
+            border-radius: 5px;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <!-- ─── NAV ─── -->
+    <nav>
+        <div id="siporma-logo"></div>
+        <ul class="navMenu">
+            <li><a href="" class="active-dashboard">Dashboard</a></li>
+            <li><a href="">Pusat Bantuan</a></li>
+        </ul>
+        <div class="action-buttons">
+            <a href="#"><img src="../../assets/icons/notification.svg" alt="icon" width="20" height="20"></a>
+            <a href="#"><img src="../../assets/icons/profile.svg" alt="icon" width="20" height="20"></a>
+            <a href="#">Lapor Sekarang</a>
+        </div>
+    </nav>
+
+    <!-- ─── MAIN ─── -->
+    <main>
+        <div class="hero-search">
+            <div class="hero-h1">
+                Bagaimana kami bisa <span>membantu Anda?</span>
+            </div>
+            <p>Temukan panduan penggunaan, solusi teknis, dan jawaban atas pertanyaan umum seputar sistem pelaporan
+                sarana prasarana.</p>
+            <div class="search-container">
+                <div class="search-box">
+                    <span class="icon">
+                        <svg viewBox="0 0 24 24">
+                            <path
+                                d="M21 20l-5.6-5.6a7 7 0 1 0-1.4 1.4L20 21l1-1zM10 16a6 6 0 1 1 0-12 6 6 0 0 1 0 12z" />
+                        </svg>
+                    </span>
+                    <input type="text" placeholder="Cari topik bantuan atau kata kunci...">
+                </div>
+            </div>
+            <div class="popular">
+                <span>Populer:</span>
+                <a href="#">Lupa Password</a>
+                <a href="#">Status Perbaikan</a>
+                <a href="#">Upload Foto Kerusakan</a>
+            </div>
+        </div>
+
+        <div class="menu-container">
+            <div class="menu-item">
+                <div class="icon-box">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M3 10v4c0 1.1.9 2 2 2h3l4 3v-14l-4 3H5c-1.1 0-2 .9-2 2z" />
+                    </svg>
+                </div>
+                <div class="menu-text">Cara Melapor</div>
+            </div>
+
+            <div class="menu-item">
+                <div class="icon-box">
+                    <svg viewBox="0 0 24 24">
+                        <path
+                            d="M19.14 12.94a7.49 7.49 0 0 0 .05-.94c0-.32-.02-.63-.05-.94l2.03-1.58a.5.5 0 0 0 .12-.64l-1.92-3.32a.5.5 0 0 0-.6-.22l-2.39.96a7.28 7.28 0 0 0-1.63-.94l-.36-2.54A.5.5 0 0 0 13.9 2h-3.8a.5.5 0 0 0-.49.41l-.36 2.54c-.58.23-1.12.54-1.63.94l-2.39-.96a.5.5 0 0 0-.6.22L2.71 8.47a.5.5 0 0 0 .12.64l2.03 1.58c-.03.31-.05.62-.05.94s.02.63.05.94L2.83 14.15a.5.5 0 0 0-.12.64l1.92 3.32c.13.23.39.32.6.22l2.39-.96c.51.4 1.05.71 1.63.94l.36 2.54c.04.24.25.41.49.41h3.8c.24 0 .45-.17.49-.41l.36-2.54c.58-.23 1.12-.54 1.63-.94l2.39.96c.22.09.47 0 .6-.22l1.92-3.32a.5.5 0 0 0-.12-.64l-2.03-1.58zM12 15.5A3.5 3.5 0 1 1 12 8a3.5 3.5 0 0 1 0 7.5z" />
+                    </svg>
+                </div>
+                <div class="menu-text">Tentang Perbaikan</div>
+            </div>
+
+            <div class="menu-item">
+                <div class="icon-box">
+                    <svg viewBox="0 0 24 24">
+                        <path
+                            d="M12 12c2.7 0 5-2.3 5-5s-2.3-5-5-5-5 2.3-5 5 2.3 5 5 5zm0 2c-3.3 0-10 1.7-10 5v3h20v-3c0-3.3-6.7-5-10-5z" />
+                    </svg>
+                </div>
+                <div class="menu-text">Akun & Login</div>
+            </div>
+        </div>
+
+        <div class="accordion-container">
+
+            <div class="accordion-item">
+                <button class="accordion">Bagaimana cara melaporkan kerusakan?</button>
+                <div class="panel">
+                    <p>Lorem ipsum...</p>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <button class="accordion">Apa saja yang harus disertakan dalam laporan?</button>
+                <div class="panel">
+                    <p>Lorem ipsum...</p>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <button class="accordion">Apakah saya harus login untuk melapor?</button>
+                <div class="panel">
+                    <p>Ya, Anda diwajibkan untuk login terlebih dahulu sebelum mengirim laporan. Hal ini bertujuan agar laporan dapat tersimpan dengan baik dan Anda bisa memantau status serta mendapatkan notifikasi perkembangan.</p>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <button class="accordion">Apakah laporan bisa dikirim tanpa foto?</button>
+                <div class="panel">
+                    <p>Lorem ipsum...</p>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <button class="accordion">Bagaimana jika saya salah mengisi laporan?</button>
+                <div class="panel">
+                    <p>Lorem ipsum...</p>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <button class="accordion">Di mana saya bisa melihat laporan saya?</button>
+                <div class="panel">
+                    <p>Lorem ipsum...</p>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-brand">
+            <p>SIPOR-MA</p>
+            <p>© 2026 SIPOR-MA. ALL RIGHTS RESERVED</p>
+        </div>
+
+        <div class="footer-links">
+            <div>
+                <p>kebijakan privasi</p>
+                <p>syarat & ketentuan</p>
+            </div>
+            <div>
+                <p>kontak kami</p>
+                <p>pusat bantuan</p>
+            </div>
+        </div>
+        <div class="footer-actions">
+            <a href=""><img src="../../assets/icons/globe-logo.svg" alt="icon"></a>
+            <a href=""><img src="../../assets/icons/massage-icon.svg" alt="icon"></a>
+        </div>
+    </footer>
+
+
+    <script>
+        var acc = document.getElementsByClassName("accordion");
+        var i;
+
+        for (i = 0; i < acc.length; i++) {
+            acc[i].addEventListener("click", function () {
+                this.classList.toggle("active");
+                var panel = this.nextElementSibling;
+                if (panel.style.maxHeight) {
+                    panel.style.maxHeight = null;
+                } else {
+                    panel.style.maxHeight = panel.scrollHeight + "px";
+                }
+            });
+        }
+    </script>
+</body>
+
+</html>
