@@ -11,8 +11,11 @@ body {
     flex-direction: column;
     gap: 50px;
     width: 100vw;
+    max-width: 1440px;
     height: 100vh;
     font-family: 'Poppins', sans-serif;
+    margin-right: auto;
+    margin-left: auto;
 }
 
 .wrapper {
