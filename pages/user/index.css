@@ -15,7 +15,6 @@ main.main-container {
     padding: 0;
 }
 
-/* style navbar */
 nav {
     width: 100%;
     display: flex;
@@ -271,6 +270,7 @@ nav .action-buttons a:nth-last-child(1) {
         gap: 16px;
         position: relative;
         box-shadow: 0 4px 12px rgba(0, 0, 0, 0.02);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
 
         .icon-box {
             width: 48px;
@@ -290,6 +290,12 @@ nav .action-buttons a:nth-last-child(1) {
                 color: #FFFFFF;
             }
 
+        }
+
+        &:hover {
+            border: 1.5px solid #0D9488;
+            transform: translateY(-6px);
+            box-shadow: 0 16px 32px rgba(13, 148, 136, 0.08);
         }
 
         h3 {

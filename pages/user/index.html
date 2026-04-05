@@ -282,7 +282,6 @@
 
     </main>
 
-    <!-- footer -->
     <footer>
         <div class="footer-brand">
             <p>SIPOR-MA</p>
@@ -304,6 +303,23 @@
             <a href=""><img src="../../assets/icons/massage-icon.svg" alt="icon"></a>
         </div>
     </footer>
+
+    <script>
+
+        document.addEventListener('DOMContentLoaded', function () {
+            const tabButtons = document.querySelectorAll('.dashboard-header .tabs-button');
+
+            tabButtons.forEach(button => {
+                button.addEventListener('click', function () {
+                    tabButtons.forEach(btn => btn.classList.remove('active'));
+
+                    this.classList.add('active');
+                });
+            });
+
+        });
+
+    </script>
 </body>
 
 </html>
