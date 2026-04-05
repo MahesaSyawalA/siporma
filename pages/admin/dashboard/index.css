@@ -1,0 +1,187 @@
+.main-content {
+    display: grid;
+    gap: 32px;
+    grid-template-columns: repeat(6, 1fr);
+    height: fit-content;
+
+    .summary-card {
+        grid-column: span 2;
+        align-self: start;
+        height: fit-content;
+        display: flex;
+        justify-content: space-between;
+        padding: 24px;
+        border-radius: 12px;
+        background: #FFF;
+        box-shadow: 0 4px 20px -4px rgba(0, 76, 63, 0.10);
+
+        .summary-title {
+            color: #3F4945;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 20px;
+        }
+
+        .summary-count {
+            color: #006557;
+            font-family: "Plus Jakarta Sans";
+            font-size: 36px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 40px;
+            /* 111.111% */
+        }
+
+        .summary-statistic {
+            display: flex;
+            gap: 5px;
+            align-items: center;
+            color: #0D9488;
+            font-family: Poppins;
+            font-size: 12px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 16px;
+            /* 133.333% */
+        }
+
+        .summary-icon {
+            display: flex;
+            justify-content: center;
+            padding: 12px;
+            height: fit-content;
+            width: fit-content;
+            align-items: center;
+            border-radius: 12px;
+            background: rgba(0, 76, 63, 0.10);
+        }
+    }
+
+    .category-container {
+        grid-column: span 3;
+        display: flex;
+        height: fit-content;
+        padding: 32px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 40px;
+        grid-row: 2 / span 1;
+        grid-column: 4 / span 3;
+        justify-self: stretch;
+        border-radius: 12px;
+        background: #FFF;
+        box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.10);
+
+        .category-title-container {
+            display: flex;
+            padding-right: 0.01px;
+            justify-content: space-between;
+            align-items: center;
+            align-self: stretch;
+
+            .title-content1>:first-child {
+                color: #262626;
+                font-size: 18px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: 28px;
+            }
+
+            .title-content1>:last-child {
+                color: #525252;
+                font-family: Inter;
+                font-size: 14px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 20px;
+            }
+
+            .title-content2 {
+                display: flex;
+                align-items: center;
+                gap: 6px;
+
+                /* typography */
+                color: var(--color-neutral-600, #525252);
+                font-family: var(--family-body, Poppins);
+                font-size: 12px;
+                font-style: normal;
+                font-weight: 500;
+
+                >:first-child {
+                    display: flex;
+                    background-color: #006557;
+                    border-radius: 100%;
+                    width: 12px;
+                    height: 12px;
+                    padding: 4px;
+                }
+            }
+
+        }
+
+        .range-container {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 24px;
+            align-self: stretch;
+
+            .range-list {
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                gap:8px;
+
+                .range-title {
+                    width: 100%;
+                    display: flex;
+                    justify-content: space-between;
+
+                    :first-child {
+                        color: #262626;
+                        font-size: 14px;
+                        font-style: normal;
+                        font-weight: 600;
+                        line-height: 20px;
+                    }
+
+                    :last-child {
+                        color: #525252;
+                        font-family: Inter;
+                        font-size: 14px;
+                        font-style: normal;
+                        font-weight: 400;
+                        line-height: 20px;
+                    }
+                }
+
+                .range-bar-container {
+                    display: flex;
+                    height: 12px;
+                    padding-right: 72.009px;
+                    align-items: center;
+                    align-self: stretch;
+                    border-radius: 9999px;
+                    background: #F0F4F3;
+
+                    .range-bar-fill{
+                        width: 70%;
+                        height: 100%;
+                        color: #006557;
+                    }
+                }
+            }
+
+        }
+
+    }
+
+    .table-container {
+        overflow-x: scroll;
+        grid-column: span 6;
+    }
+
+
+}
