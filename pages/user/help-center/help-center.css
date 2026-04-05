@@ -115,7 +115,6 @@ main {
     justify-content: center;
 }
 
-/* HERO SEARCH BAR */
 .hero-search {
     display: flex;
     flex-direction: column;
@@ -227,7 +226,6 @@ main {
     }
 }
 
-/* MENU */
 .menu-container {
     display: flex;
     gap: 20px;
@@ -269,7 +267,6 @@ main {
     }
 }
 
-/* ACCORDION */
 .accordion-container {
     width: 800px;
     display: flex;
@@ -315,7 +312,7 @@ main {
             }
         }
 
-        /* PANEL */
+
         .panel {
             max-height: 0;
             overflow: hidden;
@@ -398,7 +395,6 @@ main {
 }
 
 
-/* RESPONSIVE */
 @media (max-width: 900px) {
 
     .accordion-container {
@@ -534,7 +530,6 @@ main {
     }
 }
 
-/* style footer */
 footer {
     width: 100%;
     background-color: white;

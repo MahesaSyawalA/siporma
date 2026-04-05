@@ -99,7 +99,6 @@ nav .action-buttons a:nth-last-child(1) {
     align-items: center;
 }
 
-/* ── MAIN ── */
 main {
     flex: 1;
     /* max-width: 980px; */
@@ -111,7 +110,6 @@ main {
     gap: 22px;
 }
 
-/* ── CARD ── */
 .card {
     background: var(--card);
     border-radius: var(--radius);
@@ -120,7 +118,6 @@ main {
     padding: 26px 28px;
 }
 
-/* ── PROFILE HEADER ── */
 .profile-header {
     display: flex;
     align-items: center;
@@ -227,7 +224,6 @@ main {
     color: var(--teal);
 }
 
-/* ── STATS ROW ── */
 .stats-row {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -300,14 +296,12 @@ main {
     color: var(--muted);
 }
 
-/* ── TWO COLS ── */
 .two-col {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 22px;
 }
 
-/* ── SECTION TITLE ── */
 .section-title {
     font-family: 'Plus Jakarta Sans', sans-serif;
     font-weight: 700;
@@ -316,7 +310,6 @@ main {
     margin-bottom: 18px;
 }
 
-/* ── FORM GRID ── */
 .form-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -354,7 +347,6 @@ main {
     box-shadow: 0 0 0 3px rgba(0, 184, 148, .12);
 }
 
-/* ── NOTIFICATION ── */
 .notif-item {
     display: flex;
     align-items: flex-start;
@@ -403,7 +395,6 @@ main {
     line-height: 1.45;
 }
 
-/* Toggle */
 .toggle {
     position: relative;
     width: 44px;
@@ -447,14 +438,12 @@ main {
     transform: translateX(20px);
 }
 
-/* ── RIGHT PANEL ── */
 .right-panel {
     display: flex;
     flex-direction: column;
     gap: 22px;
 }
 
-/* ── SECURITY ── */
 .security-card .form-group+.form-group {
     margin-top: 14px;
 }
@@ -480,7 +469,6 @@ main {
     transform: translateY(-1px);
 }
 
-/* ── HELP BOX ── */
 .help-box {
     background: linear-gradient(135deg, var(--teal-soft) 0%, #d4f5eb 100%);
     border: 1px solid var(--teal-mid);
@@ -518,7 +506,6 @@ main {
     gap: 8px;
 }
 
-/* ── TABLET (≤ 768px) ── */
 @media (max-width: 768px) {
 
     main {
@@ -546,7 +533,6 @@ main {
     }
 }
 
-/* ── MOBILE (≤ 480px) ── */
 @media (max-width: 480px) {
 
     main {

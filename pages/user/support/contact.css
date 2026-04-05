@@ -9,7 +9,6 @@ body {
     background-color: #F8FAFC;
 }
 
-/* style navbar */
 nav {
     width: 100%;
     display: flex;
@@ -340,7 +339,6 @@ nav .action-buttons a:nth-last-child(1) {
 
 }
 
-/* style footer */
 footer {
     width: 100%;
     background-color: white;
