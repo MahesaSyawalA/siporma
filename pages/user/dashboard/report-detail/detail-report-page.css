@@ -4,6 +4,8 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+
+    font-family: 'Poppins', sans-serif;
 }
 
 :root {
@@ -44,7 +46,7 @@ body {
 
 
 /* ── MAIN WRAPPER ── */
-main{
+main {
     flex: 1;
     max-width: 1200px;
     margin: 0 auto;
