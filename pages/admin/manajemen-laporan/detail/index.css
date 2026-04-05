@@ -314,6 +314,10 @@
                     background: #B4DEDA;
                 }
 
+                >:first-child.neural {
+                    background: #DFE3E2;
+                }
+
                 >:last-child {
                     padding-bottom: 24px;
 
@@ -558,7 +562,7 @@
             grid-column: span 1;
         }
 
-        .admin-massage-card{
+        .admin-massage-card {
             order: 4;
             grid-column: span 1;
         }
