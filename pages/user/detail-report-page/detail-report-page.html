@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Help Center</title>
+    <link rel="stylesheet" href="detail-report-page.css">
+
+    <!-- footer -->
+    <style>
+        footer {
+            width: 100%;
+            background-color: white;
+            display: flex;
+            align-items: center;
+            justify-content: end;
+            padding: 60px 40px;
+            gap: 70px;
+            background-image: url("../../assets/bg-footer.svg");
+            background-position: left;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        .footer-brand {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .footer-brand P:nth-child(1) {
+            color: #0A6F66;
+            font-weight: 700;
+            font-size: 20px;
+        }
+
+        .footer-brand P:nth-child(2) {
+            width: 470px;
+            color: #3F4945;
+            font-size: 12px;
+        }
+
+        .footer-links {
+            display: flex;
+            text-transform: uppercase;
+            gap: 32px;
+            font-size: 12px;
+            color: #3F4945;
+        }
+
+        .footer-links div {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .footer-actions {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .footer-actions a {
+            background-color: #E5E9E8;
+            border-radius: 12px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #E5E9E8;
+            border-radius: 12px;
+            height: 40px;
+            width: 40px;
+        }
+    </style>
+
+    <!-- navbar -->
+    <style>
+        /* ini baru styling yang harus ada ketika mau nambahin component nya guyse */
+        nav {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 20px 20px;
+            background-color: white;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        #siporma-logo {
+            background-image: url('../../assets/siporma-logo.svg');
+            width: 250px;
+            height: 50px;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+        }
+
+        .navMenu {
+            display: flex;
+            gap: 10px;
+            list-style: none;
+        }
+
+        .navMenu li a {
+            text-decoration: none;
+            padding: 1px 0px;
+            font-weight: 600;
+            color: #707071;
+        }
+
+        .navMenu .active-dashboard {
+            color: #0D9488;
+            border-bottom: 3px solid #0D9488;
+        }
+
+        nav .action-buttons {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        nav .action-buttons a {
+            text-decoration: none;
+            padding: 10px 10px;
+            color: #0D9488;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            background-color: white;
+        }
+
+        nav .action-buttons a:nth-last-child(1) {
+            text-decoration: none;
+            padding: 10px 20px;
+            background-color: #0D9488;
+            color: white;
+            border-radius: 5px;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <!-- ─── NAV ─── -->
+    <nav>
+        <div id="siporma-logo"></div>
+        <ul class="navMenu">
+            <li><a href="" class="active-dashboard">Dashboard</a></li>
+            <li><a href="">Pusat Bantuan</a></li>
+        </ul>
+        <div class="action-buttons">
+            <a href="#"><img src="../../assets/icons/notification.svg" alt="icon" width="20" height="20"></a>
+            <a href="#"><img src="../../assets/icons/profile.svg" alt="icon" width="20" height="20"></a>
+            <a href="#">Lapor Sekarang</a>
+        </div>
+    </nav>
+
+    <!-- ─── MAIN ─── -->
+    <main>
+        <div class="breadcrumb">
+            <a href="#">Dashboard</a>
+            <span class="sep">›</span>
+            <a href="#">Riwayat Laporan</a>
+            <span class="sep">›</span>
+            <span class="current">Detail #RMP-2025-002</span>
+        </div>
+
+
+        <div class="page-header">
+            <h1>Detail Dokumentasi Perbaikan</h1>
+            <span class="badge-selesai">✓ Selesai</span>
+        </div>
+
+
+        <div class="content-grid">
+
+            <!-- LEFT COLUMN -->
+            <div class="left-col">
+
+                <!-- Media cards -->
+                <div class="media-row">
+
+                    <!-- Laporan Awal -->
+                    <div class="media-card card">
+                        <div class="media-header">
+                            <svg viewBox="0 0 24 24" stroke-width="2">
+                                <rect x="3" y="3" width="18" height="18" rx="2" />
+                                <path d="M3 9h18M9 21V9" />
+                            </svg>
+                            Laporan Awal
+                        </div>
+                        <div class="media-img">
+                            <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fst5.depositphotos.com%2F1008239%2F61886%2Fi%2F450%2Fdepositphotos_618863014-stock-photo-broken-dirty-home-air-conditioner.jpg&f=1&nofb=1&ipt=292e7fad21ed9109e899759e1551a61d75f234344367f1422e709301dda45490"
+                                alt="">
+                        </div>
+                        <div class="media-footer">
+                            <span class="media-badge before">Sebelum</span>
+                            <p>"AC di Ruang 314 mulai tidak mau berfungsi, kipas berputar tapi tidak ada angin diputar
+                                selama satu waktu."</p>
+                            <div class="media-meta">
+                                <svg viewBox="0 0 24 24" stroke-width="2">
+                                    <circle cx="12" cy="12" r="10" />
+                                    <path d="M12 6v6l4 2" />
+                                </svg>
+                                03 Juli 2023, 2019
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Dokumentasi Perbaikan -->
+                    <div class="media-card card">
+                        <div class="media-header">
+                            <svg viewBox="0 0 24 24" stroke-width="2">
+                                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+                                <path d="M14 2v6h6M16 13H8M16 17H8M10 9H8" />
+                            </svg>
+                            Dokumentasi Perbaikan
+                        </div>
+                        <div class="media-img">
+                            <img src="https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Ffreebie.photography%2Fhome%2Fair_conditioner.jpg&f=1&nofb=1&ipt=ced3c9600795b044997dd6878d947437a9d8fa43e96af4e2036e36a488475920"
+                                alt="">
+                        </div>
+                        <div class="media-footer">
+                            <span class="media-badge after">Sesudah</span>
+                            <p>"Semua komponen sepenuhnya diganti dan kembali berfungsi dengan baik. Filter udara juga
+                                sudah dibersihkan."</p>
+                            <div class="media-meta">
+                                <svg viewBox="0 0 24 24" stroke-width="2">
+                                    <circle cx="12" cy="12" r="10" />
+                                    <path d="M12 6v6l4 2" />
+                                </svg>
+                                Winda Budi Tuah Deswita Terry
+                            </div>
+                        </div>
+                    </div>
+
+                </div><!-- /media-row -->
+
+                <!-- Audit Trail -->
+                <div class="card audit-card">
+                    <div class="audit-header">
+                        <svg viewBox="0 0 24 24" stroke-width="2">
+                            <path d="M9 11l3 3L22 4" />
+                            <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11" />
+                        </svg>
+                        <h3>Audit Trail Laporan</h3>
+                    </div>
+
+                    <div class="timeline">
+
+                        <div class="timeline-item">
+                            <div class="dot done"></div>
+                            <div class="tl-body">
+                                <div class="tl-title">Laporan Terkirim</div>
+                                <div class="tl-desc">Sistem secara otomatis laporan dan mendaftarkan nama teknisi secara
+                                    otomatis kepada petugas.</div>
+                            </div>
+                            <div class="tl-date">15 Juli 2023, 1015</div>
+                        </div>
+
+                        <div class="timeline-item">
+                            <div class="dot done"></div>
+                            <div class="tl-body">
+                                <div class="tl-title">Verifikasi Admin</div>
+                                <div class="tl-desc">Laporan di-verifikasi oleh admin tim Eduardo. Koordinasi telah
+                                    dilanjutkan dengan vendor lapangan teknisi.</div>
+                            </div>
+                            <div class="tl-date">16 Juli 2023, 09:30</div>
+                        </div>
+
+                        <div class="timeline-item">
+                            <div class="dot done"></div>
+                            <div class="tl-body">
+                                <div class="tl-title">Penugasan Tim</div>
+                                <div class="tl-desc">Tim Petugas ditugaskan: Hendrianti Rejo Sari, LT.11 dengan memenuhi
+                                    persetujuan kapasitas teknisi.</div>
+                            </div>
+                            <div class="tl-date">17 Juli 2023, 14:00</div>
+                        </div>
+
+                        <div class="timeline-item">
+                            <div class="dot done"></div>
+                            <div class="tl-body">
+                                <div class="tl-title">Proses Perbaikan</div>
+                                <div class="tl-desc">Tekisi sedang melaksanakan penanganan fasilitas di A.C. Pengecekan
+                                    mesin telah berjalan Distribusi.</div>
+                            </div>
+                            <div class="tl-date">19 Juli 2023, 10:15</div>
+                        </div>
+
+                        <div class="timeline-item">
+                            <div class="dot final"><!--&#10003;--></div> 
+                            <div class="tl-body">
+                                <div class="tl-title">Selesai</div>
+                                <div class="tl-desc">Perbaikan selesai dan persetujuan-persetujuan semua pekerjaan
+                                    (sesuai konfirmasi), dan dokumentasi perbaikan telah di-upload ke sistem.</div>
+                            </div>
+                            <div class="tl-date">22 Juli 2023, 15:45</div>
+                        </div>
+
+                    </div><!-- /timeline -->
+
+                    <!-- Action bar -->
+                    <div class="action-bar">
+                        <button class="btn btn-outline">
+                            <svg viewBox="0 0 24 24" stroke-width="2">
+                                <path d="M19 12H5M12 19l-7-7 7-7" />
+                            </svg>
+                            Kembali ke Dashboard
+                        </button>
+                        <button class="btn btn-primary">
+                            <svg viewBox="0 0 24 24" stroke-width="2">
+                                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                                <polyline points="7 10 12 15 17 10" />
+                                <line x1="12" y1="15" x2="12" y2="3" />
+                            </svg>
+                            Unduh Bukti Laporan (PDF)
+                        </button>
+                    </div>
+
+                </div><!-- /audit-card -->
+
+            </div><!-- /left-col -->
+
+            <!-- RIGHT SIDEBAR -->
+            <aside class="sidebar">
+
+                <!-- Info Laporan -->
+                <div class="card info-card">
+                    <div class="info-title">Informasi Laporan</div>
+
+                    <div class="info-row">
+                        <div class="info-icon">
+                            <svg viewBox="0 0 24 24" stroke-width="2">
+                                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+                                <polyline points="14 2 14 8 20 8" />
+                            </svg>
+                        </div>
+                        <div class="info-text">
+                            <div class="label">ID Laporan</div>
+                            <div class="value">#RMP-2025-002</div>
+                        </div>
+                    </div>
+
+                    <div class="info-row">
+                        <div class="info-icon">
+                            <svg viewBox="0 0 24 24" stroke-width="2">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                                <circle cx="12" cy="10" r="3" />
+                            </svg>
+                        </div>
+                        <div class="info-text">
+                            <div class="label">Lokasi</div>
+                            <div class="value">Gedung Biru Lt. 5, Ruang 314</div>
+                        </div>
+                    </div>
+
+                    <div class="info-row">
+                        <div class="info-icon">
+                            <svg viewBox="0 0 24 24" stroke-width="2">
+                                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+                                <circle cx="9" cy="7" r="4" />
+                                <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
+                                <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+                            </svg>
+                        </div>
+                        <div class="info-text">
+                            <div class="label">Ditangani Oleh</div>
+                            <div class="value">Hendrianti Rejo Sari (HVAC)</div>
+                        </div>
+                    </div>
+
+                    <div class="info-row">
+                        <div class="info-icon">
+                            <svg viewBox="0 0 24 24" stroke-width="2">
+                                <circle cx="12" cy="12" r="10" />
+                                <polyline points="12 6 12 12 16 14" />
+                            </svg>
+                        </div>
+                        <div class="info-text">
+                            <div class="label">Durasi Perbaikan</div>
+                            <div class="value">7660</div>
+                        </div>
+                    </div>
+
+                </div><!-- /info-card -->
+
+                <!-- Help card -->
+                <div class="help-card">
+                    <h4>Butuh Bantuan?</h4>
+                    <p>Apakah Anda mengalami kesulitan? Tim support kami siap membantu memulihkan masalah lebih lanjut.
+                    </p>
+                    <button class="btn-help">HUBUNGI HELPDESK</button>
+                </div>
+
+            </aside><!-- /sidebar -->
+
+        </div><!-- /content-grid -->
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-brand">
+            <p>SIPOR-MA</p>
+            <p>© 2026 SIPOR-MA. ALL RIGHTS RESERVED</p>
+        </div>
+
+        <div class="footer-links">
+            <div>
+                <p>kebijakan privasi</p>
+                <p>syarat & ketentuan</p>
+            </div>
+            <div>
+                <p>kontak kami</p>
+                <p>pusat bantuan</p>
+            </div>
+        </div>
+        <div class="footer-actions">
+            <a href=""><img src="../../assets/icons/globe-logo.svg" alt="icon"></a>
+            <a href=""><img src="../../assets/icons/massage-icon.svg" alt="icon"></a>
+        </div>
+    </footer>
+
+
+    <script>
+        var acc = document.getElementsByClassName("accordion");
+        var i;
+
+        for (i = 0; i < acc.length; i++) {
+            acc[i].addEventListener("click", function () {
+                this.classList.toggle("active");
+                var panel = this.nextElementSibling;
+                if (panel.style.maxHeight) {
+                    panel.style.maxHeight = null;
+                } else {
+                    panel.style.maxHeight = panel.scrollHeight + "px";
+                }
+            });
+        }
+    </script>
+</body>
+
+</html>
